@@ -14,6 +14,7 @@ import { RouterModule } from '@angular/router';
     SharedModule,
     RouterModule.forChild([
       { path: 'products',
+        resolve: { resolvedData: ProductResolver },
         children: [
           { path: '', component: ProductListComponent },
           { 
